@@ -6,21 +6,21 @@ public class Employee {
     private String lastName;
     private double salary;
     private String jobPosition;
-    private boolean isMan;
-    private int workingDays;
-    public Employee(int id, String firstName, String lastName, double salary, String jobPosition, boolean isMan, int workingDays) {
+    public Employee(int id, String firstName, String lastName, double salary, String jobPosition) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
         this.jobPosition = jobPosition;
-        this.isMan = isMan;
-        this.workingDays = workingDays;
     }
 
 
     public String getFullName() {
         return this.firstName + " " + this.lastName;
+    }
+    public void setFullName(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     double  moneyOverTimes() {
@@ -30,8 +30,8 @@ public class Employee {
     public String getJobPosition() {
         return this.jobPosition;
     }
-    public void setJobPosition() {
-
+    public void setJobPosition(String newJobPosition) {
+this.jobPosition = newJobPosition;
     }
     public double getSalary() {
         return this.salary;
