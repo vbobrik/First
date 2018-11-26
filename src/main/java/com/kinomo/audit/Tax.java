@@ -1,4 +1,4 @@
-package main.java.com.kinomo.resourses;
+package main.java.com.kinomo.audit;
 
 public class Tax {
     private double taxPercent = 0.2;

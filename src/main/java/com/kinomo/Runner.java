@@ -1,7 +1,8 @@
-package main.java.com.kinomo.peoples;
+package main.java.com.kinomo.audit;
 
-import main.java.com.kinomo.resourses.Audit;
-import main.java.com.kinomo.resourses.Tax;
+import main.java.com.kinomo.audit.Management;
+import main.java.com.kinomo.audit.Tax;
+import main.java.com.kinomo.models.Employee;
 
 public class Runner {
     public static void main(String args[]) {
@@ -10,14 +11,22 @@ public class Runner {
         Employee john = new Employee(1234, "John", "Smight", 450.605, "middle" );
         Employee helen = new Employee(12345, "Helen", "Pork", 200.2, "senior");
 
-        Audit audit1 = new Audit(100460, 402.55, 13, false, "BYN");
+        Model model1 = new Model(1, 1, "", 1);
+
+        Management auditForStefan = new Management(100460, 402.55, 13, false, "BYN");
+
+        auditForStefan.getFullName();
+        System.out.println(auditForStefan.getFullName()  + " has salary: " + stefan.getSalary());
+
+
+
         System.out.println("Median salary: " + audit1.medianSalary());
         System.out.println("All money amount: " + audit1.getAllMoney());
         audit1.setSalary(john);
         System.out.println(john.getFullName()  + " has salary: " + john.getSalary());
         System.out.println("All money amount: " + audit1.getAllMoney());
         audit1.setSalary(stefan);
-        System.out.println(stefan.getFullName()  + " has salary: " + stefan.getSalary());
+
         System.out.println("All money amount: " + audit1.getAllMoney());
         audit1.setSalary(helen);
         System.out.println(helen.getFullName()  + " has salary: " + helen.getSalary());

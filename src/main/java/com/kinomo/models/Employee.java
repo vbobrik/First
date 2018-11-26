@@ -1,11 +1,13 @@
-package main.java.com.kinomo.peoples;
-
+package main.java.com.kinomo.models;
+import main.java.com.kinomo.audit.Management;
 public class Employee {
+
     private int id;
     private String firstName;
     private String lastName;
     private double salary;
     private String jobPosition;
+
     public Employee(int id, String firstName, String lastName, double salary, String jobPosition) {
         this.id = id;
         this.firstName = firstName;
@@ -14,16 +16,29 @@ public class Employee {
         this.jobPosition = jobPosition;
     }
 
-
-    public String getFullName() {
-        return this.firstName + " " + this.lastName;
+    public void setId(int id) {
+        this.id = id;
     }
-    public void setFullName(String firstName, String lastName) {
+    public int detId() {
+        return this.id;
+    }
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+    public String getFirstName() {
+        return this.firstName;
+    }
+    public String getLastName() {
+        return this.lastName;
+    }
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    double  moneyOverTimes() {
+
+
+
+    public double  moneyOverTimes() {
         return this.salary + 20;
     }
 
@@ -39,4 +54,6 @@ this.jobPosition = newJobPosition;
     public void setSalary(double salary) {
         this.salary = salary;
     }
+
+
 }
